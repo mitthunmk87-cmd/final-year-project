@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block title %}Home - College Admission Assistant{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Welcome to College Admission Assistant</h1>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">Your intelligent guide through the college admission process. Get instant answers to all your queries!</p>
+        <a href="{{ url_for('chat') }}" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold text-lg hover:bg-blue-50 transition duration-300 inline-block">
+            Start Chatting <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Why Choose Our Assistant?</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                <div class="text-blue-500 text-4xl mb-4">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">24/7 Availability</h3>
+                <p class="text-gray-600">Get instant answers anytime, day or night. No waiting for office hours or email responses.</p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                <div class="text-blue-500 text-4xl mb-4">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">AI-Powered Assistance</h3>
+                <p class="text-gray-600">Smart responses based on thousands of previous admission queries and expert knowledge.</p>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                <div class="text-blue-500 text-4xl mb-4">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Personalized Guidance</h3>
+                <p class="text-gray-600">Tailored responses based on your specific questions about admissions, courses, and campus life.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What We Help With -->
+<section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">What We Can Help You With</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-5 rounded-lg shadow-md">
+                <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-file-alt text-blue-600 text-xl"></i>
+                </div>
+                <h4 class="font-semibold text-lg mb-2">Application Process</h4>
+                <p class="text-gray-600 text-sm">Step-by-step guidance on submitting your application correctly.</p>
+            </div>
+            
+            <div class="bg-white p-5 rounded-lg shadow-md">
+                <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-dollar-sign text-blue-600 text-xl"></i>
+                </div>
+                <h4 class="font-semibold text-lg mb-2">Fee Structure</h4>
+                <p class="text-gray-600 text-sm">Clear information about tuition, scholarships, and financial aid.</p>
+            </div>
+            
+            <div class="bg-white p-5 rounded-lg shadow-md">
+                <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-calendar-alt text-blue-600 text-xl"></i>
+                </div>
+                <h4 class="font-semibold text-lg mb-2">Important Deadlines</h4>
+                <p class="text-gray-600 text-sm">Never miss an application or scholarship deadline.</p>
+            </div>
+            
+            <div class="bg-white p-5 rounded-lg shadow-md">
+                <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-home text-blue-600 text-xl"></i>
+                </div>
+                <h4 class="font-semibold text-lg mb-2">Campus Facilities</h4>
+                <p class="text-gray-600 text-sm">Learn about accommodation, libraries, labs, and student life.</p>
+            </div>
+        </div>
+        
+        <div class="text-center mt-10">
+            <a href="{{ url_for('chat') }}" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 inline-flex items-center">
+                Ask Your Question Now <i class="fas fa-comment ml-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial -->
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto bg-blue-50 p-8 rounded-2xl border border-blue-200">
+            <div class="flex items-center mb-6">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                    <i class="fas fa-user-graduate text-blue-600 text-2xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg">Sarah Johnson</h4>
+                    <p class="text-blue-600">Admitted Student, Class of 2024</p>
+                </div>
+            </div>
+            <p class="text-gray-700 italic text-lg">
+                "The admission assistant was incredibly helpful! It answered all my questions about deadlines and requirements instantly. 
+                It made the stressful admission process so much easier to navigate. Highly recommend!"
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}

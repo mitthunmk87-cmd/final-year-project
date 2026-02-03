@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}College Admission Assistant{% endblock %}</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    {% block head %}{% endblock %}
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-graduation-cap text-2xl"></i>
+                    <a href="{{ url_for('home') }}" class="text-xl font-bold">AdmitBuddy</a>
+                </div>
+                
+                <div class="hidden md:flex space-x-6">
+                    <a href="{{ url_for('home') }}" class="hover:text-blue-200 transition">Home</a>
+                    <a href="{{ url_for('chat') }}" class="hover:text-blue-200 transition">Chat Assistant</a>
+                    <a href="{{ url_for('about') }}" class="hover:text-blue-200 transition">About</a>
+                </div>
+                
+                <button id="mobile-menu-button" class="md:hidden">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <a href="{{ url_for('home') }}" class="block py-2 hover:text-blue-200">Home</a>
+                <a href="{{ url_for('chat') }}" class="block py-2 hover:text-blue-200">Chat Assistant</a>
+                <a href="{{ url_for('about') }}" class="block py-2 hover:text-blue-200">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <i class="fas fa-graduation-cap text-2xl"></i>
+                        <span class="text-xl font-bold">AdmitBuddy</span>
+                    </div>
+                    <p class="text-gray-400">Your intelligent admission assistant</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400">&copy; 2024 AdmitBuddy. All rights reserved.</p>
+                    <p class="text-gray-500 text-sm mt-1">This is a demonstration application for college admission assistance.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+    
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    
+    {% block scripts %}{% endblock %}
+</body>
+</html>

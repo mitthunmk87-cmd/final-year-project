@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+
+{% block title %}About - College Admission Assistant{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-12">
+    <div class="max-w-4xl mx-auto">
+        <!-- Page Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">About College Admission Assistant</h1>
+            <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">An AI-powered solution to simplify the college admission process for students worldwide.</p>
+        </div>
+        
+        <!-- Mission Section -->
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <div class="flex items-start mb-6">
+                <div class="bg-blue-100 p-4 rounded-xl mr-6">
+                    <i class="fas fa-bullseye text-blue-600 text-3xl"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-3">Our Mission</h2>
+                    <p class="text-gray-700 mb-4">
+                        The college admission process can be overwhelming, confusing, and stressful for students and parents. 
+                        With hundreds of questions about requirements, deadlines, fees, and procedures, finding accurate information quickly is challenging.
+                    </p>
+                    <p class="text-gray-700">
+                        Our mission is to democratize access to admission information by providing an intelligent, 
+                        24/7 assistant that answers questions instantly, accurately, and comprehensively.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- How It Works -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">How It Works</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 font-bold text-2xl">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Ask Your Question</h3>
+                    <p class="text-gray-600">Type or speak your question about any aspect of college admissions in natural language.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 font-bold text-2xl">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">AI Processing</h3>
+                    <p class="text-gray-600">Our system analyzes your question and searches through thousands of admission FAQs and official documents.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 font-bold text-2xl">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Instant Answer</h3>
+                    <p class="text-gray-600">Receive a clear, accurate, and comprehensive answer tailored to your specific query.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Features Detail -->
+        <div class="bg-gray-50 rounded-xl p-8 mb-12">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Key Features</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="flex items-start">
+                    <div class="text-green-500 mr-4 mt-1">
+                        <i class="fas fa-check-circle text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Comprehensive Knowledge Base</h4>
+                        <p class="text-gray-600">Trained on thousands of admission documents, FAQs, and expert knowledge.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="text-green-500 mr-4 mt-1">
+                        <i class="fas fa-check-circle text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">24/7 Availability</h4>
+                        <p class="text-gray-600">Get answers anytime, without waiting for office hours or email responses.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="text-green-500 mr-4 mt-1">
+                        <i class="fas fa-check-circle text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Multilingual Support</h4>
+                        <p class="text-gray-600">Ask questions in multiple languages for greater accessibility.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="text-green-500 mr-4 mt-1">
+                        <i class="fas fa-check-circle text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Privacy Focused</h4>
+                        <p class="text-gray-600">We don't store personal information and all chats are anonymous.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="text-green-500 mr-4 mt-1">
+                        <i class="fas fa-check-circle text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Regular Updates</h4>
+                        <p class="text-gray-600">Our knowledge base is updated regularly with the latest admission information.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="text-green-500 mr-4 mt-1">
+                        <i class="fas fa-check-circle text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Human Escalation</h4>
+                        <p class="text-gray-600">Complex questions are automatically forwarded to human admission counselors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="text-center">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Ready to Simplify Your Admission Journey?</h2>
+            <a href="{{ url_for('chat') }}" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition duration-300 inline-flex items-center">
+                Start Chatting with the Assistant <i class="fas fa-arrow-right ml-3"></i>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
